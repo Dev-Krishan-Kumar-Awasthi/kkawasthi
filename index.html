@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishan Kumar Awasthi (KKA) — Full-Stack Developer & Portfolio</title>
+    <meta name="description"
+        content="Official portfolio of Krishan Kumar Awasthi (KKA) — Full-Stack Developer, Flutter & React Developer, Computer Science student at Shivpuri Polytechnic College. Expert in web & mobile app development.">
+    <meta name="keywords"
+        content="Krishan Kumar Awasthi, KKA, KKA Developer, Full Stack Developer, Flutter Developer, React Developer, Web Developer, Shivpuri Polytechnic, Portfolio, Krishan Awasthi, Dev Krishan Kumar Awasthi">
+    <meta name="author" content="Krishan Kumar Awasthi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kkawasthi.vercel.app/">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Krishan Kumar Awasthi (KKA) — Full-Stack Developer">
+    <meta property="og:description"
+        content="Official portfolio of Krishan Kumar Awasthi (KKA). Full-Stack Developer specializing in Flutter, React, Node.js & more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kkawasthi.vercel.app/">
+    <meta property="og:image" content="https://kkawasthi.vercel.app/krishan1.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Krishan Kumar Awasthi (KKA) — Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer | Flutter & React | Portfolio">
+    <meta name="twitter:image" content="https://kkawasthi.vercel.app/krishan1.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="krishan1.jpeg">
+
+    <!-- Structured Data (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Krishan Kumar Awasthi",
+        "alternateName": "KKA",
+        "url": "https://kkawasthi.vercel.app/",
+        "image": "https://kkawasthi.vercel.app/krishan1.jpeg",
+        "jobTitle": "Full-Stack Developer",
+        "email": "awasthikrishnaa92@gmail.com",
+        "telephone": "+917089881219",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Shivpuri",
+            "addressRegion": "Madhya Pradesh",
+            "addressCountry": "India"
+        },
+        "sameAs": [
+            "https://github.com/Dev-Krishan-Kumar-Awasthi",
+            "https://www.instagram.com/krishna_awasth_"
+        ],
+        "knowsAbout": ["Web Development", "Flutter", "React", "Node.js", "Firebase", "Supabase", "Full-Stack Development"]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">KKA</span>
+        </div>
+    </div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>KKA<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <a href="resume.pdf" download class="btn btn-nav-resume">
+            <i class="fas fa-download"></i>
+            <span>Resume</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="hero">
+        <!-- Left Side: Vertical Social Bar -->
+        <div class="hero-social-bar">
+            <img src="krishan1.jpeg" alt="Krishan" class="hero-side-photo">
+            <a href="https://github.com/Dev-Krishan-Kumar-Awasthi" target="_blank" title="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/krishna_awasth_" target="_blank" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917089881219" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:awasthikrishnaa92@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <div class="social-bar-line"></div>
+        </div>
+
+        <!-- Right Side: Floating Code Snippets -->
+        <div class="hero-code-float">
+            <div class="code-snippet code-snippet-1">
+                <span class="code-keyword">const</span> <span class="code-var">developer</span> = {<br>
+                &nbsp;&nbsp;<span class="code-key">name</span>: <span class="code-string">"Krishan"</span>,<br>
+                &nbsp;&nbsp;<span class="code-key">role</span>: <span class="code-string">"Full-Stack"</span>,<br>
+                &nbsp;&nbsp;<span class="code-key">passion</span>: <span class="code-bool">true</span><br>
+                };
+            </div>
+            <div class="code-snippet code-snippet-2">
+                <span class="code-keyword">while</span>(<span class="code-var">alive</span>) {<br>
+                &nbsp;&nbsp;<span class="code-var">code</span>();<br>
+                &nbsp;&nbsp;<span class="code-var">learn</span>();<br>
+                &nbsp;&nbsp;<span class="code-var">grow</span>();<br>
+                }
+            </div>
+        </div>
+
+        <!-- Glowing Orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+            <h1 class="hero-name">
+                <span class="greeting">Hello, I'm</span>
+                <span class="name-main">Krishan Kumar</span>
+                <span class="name-accent">Awasthi</span>
+            </h1>
+            <div class="hero-typed-wrapper">
+                <span class="typed-prefix">I'm a&nbsp;</span>
+                <span id="typed-output" class="typed-text"></span>
+            </div>
+            <p class="hero-tagline">Crafting digital experiences that push boundaries — from <strong>mobile
+                    apps</strong> to <strong>full-stack systems</strong>.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    <span>View My Work</span>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Get In Touch</span>
+                </a>
+                <a href="resume.pdf" download class="btn btn-outline btn-resume">
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="about-image-border"></div>
+                    <div class="about-image">
+                        <img src="krishan1.jpeg" alt="Krishan Kumar Awasthi" loading="lazy">
+                    </div>
+                    <div class="about-image-decoration"></div>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-subtitle">
+                        Full-Stack Developer &<br>
+                        <span class="highlight">Computer Science Student</span>
+                    </h3>
+                    <p class="about-text">
+                        I'm <strong>Krishan Kumar Awasthi</strong> — a passionate full-stack developer currently
+                        pursuing my <strong>Polytechnic Diploma in Computer Science</strong> at
+                        <strong>Shivpuri Polytechnic College</strong>. I transform ideas into pixel-perfect,
+                        performant digital products.
+                    </p>
+                    <p class="about-text">
+                        From designing stunning school websites with advanced animations to building
+                        complete delivery apps with Flutter, Firebase, and Supabase backends — I love
+                        challenges that push me to learn and grow.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Shivpuri, M.P., India</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">Polytechnic Diploma (CS)</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+91 7089881219</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Focus</span>
+                                <span class="info-value">Full-Stack & Mobile Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span>Let's Connect</span>
+                        </a>
+                        <a href="resume.pdf" download class="btn btn-outline btn-resume">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="highlight">Arsenal</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category" data-tilt data-tilt-max="5">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML5</span><span>95%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>CSS3 / SASS</span><span>70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>React.js</span><span>58%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="58"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile -->
+                <div class="skill-category" data-tilt data-tilt-max="5">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Flutter</span><span>60%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Dart</span><span>55%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Android SDK</span><span>48%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="48"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-category" data-tilt data-tilt-max="5">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Node.js</span><span>55%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Firebase</span><span>72%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Supabase</span><span>75%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category" data-tilt data-tilt-max="5">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Other</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git & GitHub</span><span>60%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>VS Code</span><span>90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Figma</span><span>42%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="42"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Tech Orbit -->
+            <div class="tech-orbit">
+                <div class="orbit-center">
+                    <span>&lt;/&gt;</span>
+                </div>
+                <div class="orbit-ring orbit-ring-1">
+                    <div class="orbit-icon" style="--angle: 0deg;"><i class="fab fa-html5"></i></div>
+                    <div class="orbit-icon" style="--angle: 90deg;"><i class="fab fa-css3-alt"></i></div>
+                    <div class="orbit-icon" style="--angle: 180deg;"><i class="fab fa-js-square"></i></div>
+                    <div class="orbit-icon" style="--angle: 270deg;"><i class="fab fa-react"></i></div>
+                </div>
+                <div class="orbit-ring orbit-ring-2">
+                    <div class="orbit-icon" style="--angle: 45deg;"><i class="fab fa-node-js"></i></div>
+                    <div class="orbit-icon" style="--angle: 135deg;"><i class="fab fa-git-alt"></i></div>
+                    <div class="orbit-icon" style="--angle: 225deg;"><i class="fab fa-python"></i></div>
+                    <div class="orbit-icon" style="--angle: 315deg;"><i class="fab fa-github"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://maharanaprataschool.vercel.app/" target="_blank" class="project-link"
+                                    title="View Live"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Dev-Krishan-Kumar-Awasthi" target="_blank"
+                                    class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Web Development</div>
+                        <h3 class="project-title">Maharana Pratap School Website</h3>
+                        <p class="project-description">A premium school website with glassmorphism UI, particles.js
+                            animations, lightbox gallery, scroll-triggered effects, Formspree contact forms, and full
+                            SEO optimization.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Particles.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-image">
+                        <div class="project-image-placeholder project-img-2">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Mobile App + Backend</div>
+                        <h3 class="project-title">Annapurna Delivery App</h3>
+                        <p class="project-description">Full-stack food delivery system — Flutter mobile app for
+                            customers, React admin panel for management, Supabase backend with real-time order tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Supabase</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-image">
+                        <div class="project-image-placeholder project-img-3">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Admin Panel</div>
+                        <h3 class="project-title">Annapurna Admin Dashboard</h3>
+                        <p class="project-description">Complete admin panel with real-time order management, product
+                            CRUD, image cropping, analytics dashboard, and settings management built with React.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Supabase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-image">
+                        <div class="project-image-placeholder project-img-4">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Portfolio</div>
+                        <h3 class="project-title">This Portfolio Website</h3>
+                        <p class="project-description">The website you're currently viewing — featuring Three.js 3D
+                            backgrounds, GSAP scroll animations, glassmorphism design, and custom cursor effects.</p>
+                        <div class="project-tech">
+                            <span>Three.js</span>
+                            <span>GSAP</span>
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION SECTION ===================== -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">Education <span class="highlight">Timeline</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content" data-tilt data-tilt-max="5">
+                        <div class="timeline-badge">Currently Pursuing</div>
+                        <h3>Polytechnic Diploma — Computer Science</h3>
+                        <h4>Shivpuri Polytechnic College, Shivpuri (M.P.)</h4>
+                        <p>Focused on software engineering, data structures, web development, and building real-world
+                            applications. Developed multiple live projects including school websites and delivery
+                            systems.</p>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 — Present</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content" data-tilt data-tilt-max="5">
+                        <h3>Higher Secondary Education</h3>
+                        <h4>Shivpuri, Madhya Pradesh</h4>
+                        <p>Completed secondary education with focus on Science and Mathematics. Built strong
+                            fundamentals in analytical thinking and problem solving.</p>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Completed</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content" data-tilt data-tilt-max="5">
+                        <h3>Self-Taught Developer Journey</h3>
+                        <h4>Continuous Learning</h4>
+                        <p>Independently mastered Flutter, React, Node.js, Firebase, Supabase, and advanced front-end
+                            technologies through online resources, documentation, and hands-on project building.</p>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Ongoing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email Me</h4>
+                                <a href="mailto:awasthikrishnaa92@gmail.com">awasthikrishnaa92@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Call Me</h4>
+                                <a href="tel:+917089881219">+91 7089881219</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Shivpuri, Madhya Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Dev-Krishan-Kumar-Awasthi" class="social-link" title="GitHub"
+                            target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn (Coming Soon)" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/krishna_awasth_" class="social-link" title="Instagram"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/917089881219" class="social-link" title="WhatsApp" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqdglpg" method="POST">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="contactName" required autocomplete="name">
+                            <label for="contactName">Your Name</label>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="contactEmail" required autocomplete="email">
+                            <label for="contactEmail">Your Email</label>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" name="subject" id="contactSubject" required>
+                            <label for="contactSubject">Subject</label>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <textarea name="message" id="contactMessage" rows="5" required></textarea>
+                            <label for="contactMessage">Your Message</label>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>KKA<span class="logo-bracket">/&gt;</span>
+                </a>
+                <a href="resume.pdf" download class="btn btn-primary btn-footer-resume">
+                    <i class="fas fa-download"></i>
+                    <span>Download My Resume</span>
+                </a>
+                <p class="footer-text">Designed & Built with <i class="fas fa-heart"
+                        style="color: var(--accent-primary);"></i> by <strong>Krishan Kumar Awasthi</strong></p>
+                <p class="footer-copyright">&copy; 2026 All Rights Reserved.</p>
+            </div>
+        </div>
+        <button class="back-to-top" id="backToTop" aria-label="Scroll to Top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <!-- CDN Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
